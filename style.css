@@ -1,0 +1,72 @@
+/* General Page Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px; /* Prevents content from touching edges */
+}
+
+/* White Paper Container */
+.paper {
+    background-color: white;
+    width: 80%; /* Reduced margin on the sides */
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow outside the container */
+}
+
+/* Header Section */
+.header {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    text-align: center;
+    padding: 15px;
+    width: 100%; /* Ensures it spans across the container */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for larger screens */
+    gap: 5%; /* Reduced gap for tighter layout */
+    width: 100%; /* Ensures the grid stays inside the container */
+    margin-bottom: 30px; /* Added margin to create space below the grid */
+}
+
+/* Video Item */
+.video-item {
+    border: 1px solid #ddd; /* Border around videos */
+    border-radius: 8px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* Single-column layout for phones */
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+    .video-item video {
+        width: 100%; /* Stays consistent within the container */
+    }
+}
